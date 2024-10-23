@@ -29,7 +29,7 @@ export const getTranasaction = async (req, res) => {
         if (!transactionExist) {
             return res.status(400).json({message: "Transaction data not found"});
         }
-        res.status(200).json(transaction);
+        res.status(200).json(transactionExist);
     } catch (error) {
         res.status(500).json({message: error.message});
     }
